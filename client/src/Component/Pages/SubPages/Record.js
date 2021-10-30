@@ -57,7 +57,7 @@ const Records = ({admin  =false}) => {
                         <span  className="text-md text-left font-semibold text-white m-1 rounded-ful bg-sentinel-l3-g-blue  px-2  block text-center ">BANNED</span>
                         }
                         <div >
-                            <img className="rounded-xl"  src={`${API_DP}/${Element.name}.svg?b=%23fafafa`} alt="" />
+                            <img className="rounded-xl"  src={`${API_DP}${Element.name}.svg?b=%23fafafa`} alt="" />
                         </div>
                         <div>
                         <span className="text-md font-semibold text-center text-left block">{Element.name}</span>

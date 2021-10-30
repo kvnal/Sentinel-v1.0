@@ -20,7 +20,7 @@ const NewRecord = () => {
                 Outsider
                 </label>
                 <label >
-                <input type="radio"  {...register("relation")}  value="relation" name="relation"/>
+                <input type="radio"  {...register("relation")}  value="relative" name="relation"/>
                 Relative
                 </label>
             </section>

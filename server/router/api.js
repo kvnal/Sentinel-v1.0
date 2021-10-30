@@ -62,7 +62,6 @@ route.patch('/ban', async (req,res)=>{
 //complaint - comment user
 route.patch('/complaint/',async (req,res)=>{
     const id = req.body.id
-    console.log(req.body);
     const update = {$push:{complaint : req.body.complaint}}
     const response = await recordSchema.findOneAndUpdate({_id:id},update)
     return res.json(response)
