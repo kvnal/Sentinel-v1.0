@@ -103,7 +103,7 @@ route.post("/log",async (req,res)=>{
     const outsiderID= outsider[0].id;
     const smsText = createSMSText(outsiderID,response.name,response.purpose)
 
-    sendSMS(process.env.PHONE,smsText);
+    // sendSMS(process.env.PHONE,smsText);
     console.log(smsText);
     return await res.send(response);})
 module.exports = {route}
