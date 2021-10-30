@@ -23,12 +23,7 @@
             <!--<div id="connect">Connect</div>-->
             <!--<div id = "message"></div>   -->
             <header class="text-gray-600 body-font">
-              <div>
-                <!-- <img src="https://i.gifer.com/NXPt.gif" alt=""> -->
-                <!-- <img src="https://i.gifer.com/NXPt.gif" class="h-40 m-auto w-auto " alt=""> -->
-                <img src="./images/NXPt.gif" width="800" class="m-auto  " style="height: 7rem;object-fit: cover;" alt="">
-                <!-- <img src="https://thumbs.gfycat.com/RingedNiceFugu-size_restricted.gif" class="h-48 m-auto w-auto" alt=""> -->
-              </div>
+              <div class="flex justify-center items-center  h-12 w-full shadow-md bg-gradient-to-r from-sentinel-l-g-blue to-sentinel-l2-g-blue mb-8"><img src="http://localhost:3000/static/media/Sentinel.53587f79.svg" class="h-1/2" alt=""></div>
               <div class="pt-0 container  flex justify-start flex-wrap p-5 md:flex-row items-center">
                 <a class="flex justify-start title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                   <li class="button scene" id="connect"><i class="fas fa-home" aria-hidden="true"></i>INITIATE HOME</li>
@@ -39,79 +34,6 @@
                
               </div>
             </header>
-<!-- <section class="text-gray-300 surface body-font">
-  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium wdred font-mono">WATCH DOG</h1>
-      <h1 class="title-font  text-2xl mb-4 font-medium wdred font-mono">Make Your Home Security Automated</h1>
-      <p class="mb-8 leading-relaxed">The smart home automation system is designed to conveniently manage and monitor household appliances and lighting fixtures remotely, to save time and to use resources effectively.It is a control system for allowing access to home automation devices. The automation devices include lights, fan, camera and doors. It even enhances the main features of the project to control the home appliances from anywhere as remotely.  With the camera module, continuous surveillance and protection of the home is accomplished. A significant improvement is achieved in utility costs by an optimal use of energy. Using inexpensive electronic and interactive tools, this initiative can be applied, making it economically, physically and operationally feasible.Basically it involves controlling everything remotely via a visual interface and mobile application. The automation system employs the use of MQTT protocol in order to secure the transmitted device based information to and from in the network. The defence against Man in the Middle attack (MITM) is the main focus of our automation system. The routed messages are checked at the intermediate hub to check for the occurrence of MITM based DoS attacks through manual reset points.</p>
-      <div class="flex justify-center">
-        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">know more</button>
-      </div>
-    </div>
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img class="object-cover object-center rounded" alt="hero" src="https://orig00.deviantart.net/6bca/f/2016/273/0/6/dedsec_360_noise_by_junguler-dajesob.gif">
-    </div>
-  </div>
-  <div class="container mx-auto flex px-5 py-5 md:flex-row flex-col items-center" id = "weather">
-    <% if(weather !== null){ %>
-      <p class="text-2xl wdyellow inline pl-6 font-mono"><%= weather %></p>
-    <% } %>
-
-    <% if(error !== null){ %>
-      <p><%= error %></p>
-    <% } %>
-  </div>
-</section> -->
-
-
-    
-        <!-- <h5 class="text-2xl wdyellow inline pl-6 font-mono">Favorite Accessories::</h5> -->
-
-        <!-- <ul class="button-wrapper">
-            <li class="button accessory" id="dining-switch">
-                <i class="fas fa-lightbulb"></i>
-                <p>Living/Dining Switch</p>
-            </li>
-
-            <li class="button accessory" id="bed-room">
-                <i class="fas fa-lightbulb"></i>
-                <p>Bedroom Lamp</p>
-            </li>
-            <li class="button accessory" id="utility-room">
-                <i class="fas fa-lightbulb"></i>
-                <p>Utility Room</p>
-            </li>
-            <li class="button accessory" id="hall-room">
-                <i class="fas fa-lightbulb"></i>
-                <p>Hall Room</p>
-            </li>
-            <li class="button accessory" id="bath-room">
-                <i class="fas fa-lightbulb"></i>
-                <p>Bath Room</p>
-            
-            <li class="button accessory" id="W-C-light">
-                <i class="fas fa-lightbulb"></i>
-                <p>WC Light</p>
-            </li>
-            <li class="button accessory" id="cams">
-                <i class="fas fa-camera"></i>
-                <p>Cameras</p>
-            </li>
-        </ul> -->
-
-
-    <!-- <h5 class="text-2xl wdyellow inline pl-6 font-mono">Favorite Scenes::</h5> -->
-
-    <!--<ul class="button-wrapper">
-        <li class="button scene" id="good-morning" onclick="toggle_('light_bathroom'),toggle_('light_hall'),toggle_('light_bed1')"><i class="fas fa-home"></i>Good Morning</li>
-        <li class="button scene" id="good-evening" onclick="toggle_('light_hall'),toggle_('light_out'),toggle_('light_dining')"><i class="fas fa-home"></i>Good Evening</li>
-        <li class="button scene" id="leave-home" ><i class="fas fa-home"></i>Leave Home</li>
-        <li class="button scene" id="all-camera" onclick="toggle_('camera_door'),toggle_('camera_living'),toggle_('camera_bed'),toggle_('camera_hall')"><i class="fas fa-home"></i>All Camera</li>
-        <li class="button scene" id="all-lights"onclick="toggle_('light_wc'),toggle_('light_out'),toggle_('light_hall'),toggle_('light_dining'),toggle_('light_bathroom'),toggle_('light_utility'),toggle_('light_bed1')"><i class="fas fa-home"></i>All Lights</li>
-         <li class="button scene" id="good-night"><i class="fas fa-home"></i>Good Night</li>
-        <li class="button scene" id="arrive-home"><i class="fas fa-home"></i>Arrive Home</li>
-    </ul> -->
 	
     <div class="floormap">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none meet" x="0" y="0" viewBox="-0.000012627967407752294 -0.38463395833969116 900 710.7692260742188" width="100%" height="100%"><rect id="svgEditorBackground" x="0" y="0" width="900" height="710" style="fill:none; stroke: none;cursor:crosshair;"></rect><defs id="svgEditorDefs"><symbol xmlns="http://www.w3.org/2000/svg" id="f0eb" preserveAspectRatio="xMidYMid meet" viewBox="0 0 352 512"><path d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"></path></symbol><style type="text/css">.bed-room{fill:silver;}
@@ -138,13 +60,13 @@
 
 
 
-<footer class=" text-gray-600 body-font" style="background-color: #1C1D1C;">
+<footer class=" text-gray-600 body-font fixed bottom-0 w-full"  style="background-color: #1C1D1C;">
   <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
     
-      <span class="ml-3 text-xl text-white font-mono">☢ WATCH DOGS</span>
+      <span class="ml-3 text-xl text-white font-mono">SENTINEL</span>
     </a>
-    <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2021 by 2NUVS
+    <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2021 by NUVS
       <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank"></a>
     </p>
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">

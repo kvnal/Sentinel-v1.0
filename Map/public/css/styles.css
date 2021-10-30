@@ -1,6 +1,91 @@
 .message{
     font-size: large;
 }
+.shadow-md {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.to-sentinel-l2-g-blue {
+    --tw-gradient-to: #00D2FF;
+}
+.from-sentinel-l-g-blue {
+    --tw-gradient-from: #3A7BD5;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(58, 123, 213, 0));
+}
+.bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+.justify-center {
+    justify-content: center;
+}
+.items-center {
+    align-items: center;
+}
+.w-full {
+    width: 100%;
+}
+.h-12 {
+    height: 3rem;
+}
+.flex {
+    display: flex;
+}
+.z-50 {
+    z-index: 50;
+}
+.top-0 {
+    top: 0px;
+}
+.fixed {
+    position: fixed;
+}
+*, ::before, ::after {
+    --tw-ring-inset: var(--tw-empty, );
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(59, 130, 246, 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+}
+*, ::before, ::after {
+    --tw-shadow: 0 0 #0000;
+}
+*, ::before, ::after {
+    --tw-border-opacity: 1;
+    border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+body {
+    background: #002641;
+    color: white;
+    min-height: 100vh;
+}
+body {
+    font-family: inherit;
+    line-height: inherit;
+}
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+html {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.5;
+}
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+html {
+    tab-size: 4;
+}
 @media screen and (min-width: 768px) {
     .floormap {
         border: #37CEFB 2px solid;
