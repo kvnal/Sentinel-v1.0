@@ -2,7 +2,7 @@ const ChatBubble = ({selfID, chatElement}) => {
     return (<div>
         {
             chatElement.handle == selfID ?
-        <div className="mt-2 w-max  flex p-1 bg-sentinel-l3-g-blue border-l-4 border-sentinel-l2-g-blue text-sentinel-body-blue">
+        <div className="mt-2   flex p-1 bg-sentinel-l3-g-blue border-l-4 border-sentinel-l2-g-blue text-sentinel-body-blue">
             <div className="h-10 w-10">
             <img className="w-max border-sentinel-l2-g-blue border-0 bg-white rounded-full" src={`https://avatars.dicebear.com/api/personas/${chatElement.handle}.svg`} alt="" />
             </div>

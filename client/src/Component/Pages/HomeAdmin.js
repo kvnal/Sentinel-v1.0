@@ -12,7 +12,10 @@ const HomeAdmin = ({setAdmin}) => {
     
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        axios.post("/api/inbox",data).then(res=>console.log(res.data))
+        axios.post("/api/inbox",data).then(res=>{console.log(res.data)
+        })
+        
+
     };
 
     useEffect(()=>{
@@ -65,9 +68,9 @@ const HomeAdmin = ({setAdmin}) => {
                 <span className="text-2xl">Inbox</span>
                 <div>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className="text-black" {...register("title")} autoComplete="off"  type="text" placeholder = "Title" />
-                    <textarea className="text-black"  {...register("message")}  type="text" placeholder = "message" />
-                    <input type="submit" className="bg-sentinel-l2-g-blue" value="post"/>
+                    <input className="mt-4 text-white border-sentinel-l2-g-blue p-2  border-2 bg-sentinel-body-blue w-full " {...register("title")} autoComplete="off"  type="text" placeholder = "Title" />
+                    <textarea className="text-white border-sentinel-l2-g-blue p-2  border-2 bg-sentinel-body-blue w-full  h-20 mt-2"  {...register("message")}  type="text" placeholder = "message" />
+                    <input type="submit" className="bg-sentinel-l2-g-blue w-full text-sentinel-body-blue font-medium px-4 py-1 " value="post"/>
                     </form>
 
                 </div>
