@@ -24,11 +24,11 @@ const Records = ({admin  =false}) => {
     return ( 
         <div>
             <div>
-                <input className="text-black" value={search} type="text" placeholder = "search" onChange={(e)=>setSearch(e.target.value)}/>
                 { admin &&
                 <Link to="/admin/create/record">
-                <button  className="bg-sentinel-l2-g-blue text-sentinel-body-blue font-medium px-4 py-1 rounded-md">+ New Entry</button>
+                <button  className="bg-sentinel-l2-g-blue text-sentinel-body-blue font-medium px-4 py-1 w-full mb-2 ">Add Record</button>
                 </Link>}
+                <input className="text-white border-sentinel-l2-g-blue p-2  border-2 bg-sentinel-body-blue w-full " value={search} type="text" placeholder = "search" onChange={(e)=>setSearch(e.target.value)}/>
             </div>
 
             <div className="mb-4">
@@ -49,20 +49,22 @@ const Records = ({admin  =false}) => {
                 })
                 .map(Element =>(
                     <Link key={Element._id} to={`/record/${Element._id}?q=${admin}`}>
-                    <div className={Element.status===1 ? "w-full  pb-3 rounded-xl text-sentinel-body-blue bg-red-400  p-2" : "w-full  pb-3 rounded-xl text-sentinel-body-blue bg-sentinel-l2-g-blue  p-2"} >
+                    <div className={Element.status===1 ? "w-full  pb-3 rounded-md text-sentinel-body-blue bg-red-400  p-2" : "w-full  pb-3 rounded-md text-sentinel-body-blue bg-sentinel-l2-g-blue  p-2"} >
+                        
                     {/* <div className="w-full  pb-3 rounded-xl p-2 bg-sentinel-l3-g-blue" > */}
                         <span className="text-md text-left block font-bold">{relationType(Element.relation,Element.address)}</span>
+                        {Element.status===1 && 
+                        <span  className="text-md text-left font-semibold text-white m-1 rounded-ful bg-sentinel-l3-g-blue  px-2  block text-center ">BANNED</span>
+                        }
                         <div >
                             <img className="rounded-xl"  src={`${API_DP}/${Element.name}.svg?b=%23fafafa`} alt="" />
                         </div>
                         <div>
-                        <span className="text-md text-left block">{Element.name}</span>
-                        {admin && 
+                        <span className="text-md font-semibold text-center text-left block">{Element.name}</span>
+                        {/* {admin && 
                         <span className="text-md text-left block">Aadhaar : {Element.aadhaar}</span>
-                        }
-                        {Element.status===1 && 
-                        <span  className="text-md text-left font-semibold text-white rounded-full rounded-ful bg-sentinel-l3-g-blue  px-2">BANNED</span>
-                        }
+                        } */}
+                        
 
                         </div>
                     </div>

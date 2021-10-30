@@ -23,7 +23,7 @@ const LogEntry = ({name}) => {
         <Accordion allowToggle >
             <AccordionItem>
                     <AccordionButton _expanded={{ bg: "#00D2FF", color: "#002641" }}>
-                        <div className="p-2 border-b border-gray-400 flex justify-between w-full text-left">
+                        <div className="bg-sentinel-l2-g-blue text-sentinel-body-blue font-medium px-4 py-1 w-full mb-2 ">
                             Entry/Exit
                         </div>
                     </AccordionButton>
@@ -32,9 +32,9 @@ const LogEntry = ({name}) => {
 
                     <div className="border text-black border-gray-400 p-2">
                         
-                    <input type="text" {...register("address")} placeholder="address" />
-                    <input type="text" {...register("purpose")} placeholder="purpose" />
-                    <input type="submit" value="submit" />
+                    <input type="text" {...register("address")} className="mt-4 text-white border-sentinel-l2-g-blue p-2  border-2 bg-sentinel-body-blue w-full" placeholder="address" />
+                    <input type="text" {...register("purpose")} placeholder="purpose" className="mt-1 text-white border-sentinel-l2-g-blue p-2  border-2 bg-sentinel-body-blue w-full"/>
+                    <input type="submit" value="Entry/Exit" className="bg-sentinel-l2-g-blue text-sentinel-body-blue font-medium px-4 py-1 w-full mb-2" />
                     </div>
                     </form>
                 </AccordionPanel>

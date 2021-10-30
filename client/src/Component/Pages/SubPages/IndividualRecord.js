@@ -33,8 +33,9 @@ const IndividualRecord = ({ admin = false }) => {
 
                     <div>
                         <div>
-                            <span className="block">{recordData.name}</span>
-                            <span className="block">{recordData.relation}</span>
+                            <span className="block text-2xl text-center font-bold mt-2">{recordData.name}</span>
+                            <span className="block text-xl text-center text-gray-300 font-bold mt-1">Aadhaar No. : {recordData.aadhaar}</span>
+                            <span className="block italic text-center  text-lg">{recordData.relation}</span>
                             {recordData.relation == "resident" &&
                                 <span className="block">{recordData.address} </span>
                             }
@@ -43,15 +44,15 @@ const IndividualRecord = ({ admin = false }) => {
 
                         {
                             admin &&
-                            <div>
-                                {recordData.status==1 && <button className="bg-sentinel-l2-g-blue text-sentinel-body-blue font-medium px-4 py-1 rounded-md" >UnBan </button>}
-                                {recordData.status==0 && <button className="bg-sentinel-l2-g-blue text-sentinel-body-blue font-medium px-4 py-1 rounded-md" onClick={banUser}>Ban </button>}
+                            <div className="mt-2">
+                                {recordData.status==1 && <button className="text-sentinel-l2-g-blue border-2 border-sentinel-l2-g-blue bg-sentinel-body-blue font-medium px-4 py-1 w-full mb-2" >Unban </button>}
+                                {recordData.status==0 && <button className="text-sentinel-l2-g-blue border-2 border-sentinel-l2-g-blue bg-sentinel-body-blue font-medium px-4 py-1 w-full mb-2 " onClick={banUser}>Ban</button>}
 
                                 <LogEntry name={recordData.name}/>
                             </div>
                         }
                         <div>
-                            {recordData.relation != "resident" &&
+                            {(recordData.relation != "resident" && !admin)  &&
                                 <Complaint complaintData={recordData.complaint} />}
                         </div>
                     </div>
