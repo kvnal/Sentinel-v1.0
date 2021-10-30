@@ -2,7 +2,20 @@ import LivingRoomImg from '../../assets/img/living-room.jpg';
 import ParkingImg from '../../assets/img/parking.jpg';
 import ApartmentImg from '../../assets/img/apartment.jpg';
 import { Link } from 'react-router-dom';
+import { io } from 'socket.io-client';
+import {useState, useEffect } from 'react';
+
 const Home = () => {
+    const [socket, setSocket] = useState();
+
+    useEffect(() => {
+        setSocket(io("ws://localhost:4004"))
+    }, []);
+
+    const raiseAlert = ()=>{
+        return socket?.emit('alert',{message :true , handle : socket.id})
+    }
+
     return (
         <div>
             <div className="block ">
@@ -40,7 +53,7 @@ const Home = () => {
 
                 <div className="flex justify-between mt-4">
                 <button className="bg-sentinel-l2-g-blue text-sentinel-body-blue font-medium px-4 py-1 rounded-md">CCTV 📷</button>
-                <button className="bg-sentinel-l2-g-blue text-sentinel-body-blue font-medium px-4 py-1 rounded-md">Alert Guards 💂‍♂️</button>
+                <button className="bg-sentinel-l2-g-blue text-sentinel-body-blue font-medium px-4 py-1 rounded-md" onClick={raiseAlert}>Alert Guards 💂‍♂️</button>
                 </div>
             </div>
 

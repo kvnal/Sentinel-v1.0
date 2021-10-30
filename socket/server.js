@@ -22,6 +22,11 @@ io.on("connection",(socket)=>{
         io.sockets.emit("detail", {message:userCount , handle:"server"})
         
     })
+    
+    socket.on("alert",(data)=>{
+        console.log("alert raised!");
+        io.sockets.emit("alert", data)
+    })
 
 })
 
