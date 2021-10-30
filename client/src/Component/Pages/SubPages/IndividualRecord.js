@@ -34,7 +34,7 @@ const IndividualRecord = ({ admin = false }) => {
                     <div>
                         <div>
                             <span className="block text-2xl text-center font-bold mt-2">{recordData.name}</span>
-                            <span className="block text-xl text-center text-gray-300 font-bold mt-1">Aadhaar No. : {recordData.aadhaar}</span>
+                            {admin && <span className="block text-xl text-center text-gray-300 font-bold mt-1">Aadhaar No. : {recordData.aadhaar}</span>}
                             <span className="block italic text-center  text-lg">{recordData.relation}</span>
                             {recordData.relation == "resident" &&
                                 <span className="block">{recordData.address} </span>
@@ -52,8 +52,8 @@ const IndividualRecord = ({ admin = false }) => {
                             </div>
                         }
                         <div>
-                            {(recordData.relation != "resident" && !admin)  &&
-                                <Complaint complaintData={recordData.complaint} />}
+                            {recordData.relation != "resident"   &&
+                                <Complaint id={recordData._id} complaintData={recordData.complaint} />}
                         </div>
                     </div>
                 </div>
