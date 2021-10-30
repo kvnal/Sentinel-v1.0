@@ -1,12 +1,15 @@
 
 import ApartmentImg from '../../assets/img/apartment.jpg';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect , useState} from 'react';
 import {useForm} from 'react-hook-form'
 import axios from 'axios';
+import { io } from 'socket.io-client';
 
 const HomeAdmin = ({setAdmin}) => {
-
+    const [alert, setAlert] = useState(false);
+    const [socket, setSocket] = useState();
+    
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         axios.post("/api/inbox",data).then(res=>console.log(res.data))
@@ -14,8 +17,25 @@ const HomeAdmin = ({setAdmin}) => {
 
     useEffect(()=>{
         setAdmin(true)
+        setSocket(io("ws://localhost:4004"))
     },[])
+
+    useEffect(()=>{
+        socket?.on('alert',(data)=> setAlert(data.message))
+        },[socket])
+
     return (
+        <>
+        { alert ? <div className="">
+            <div className="w-full bg-red-400 block text-black text-center py-20">
+            <span className="block text-3xl font-bold">ALERT</span>
+            <span className="block text-xl font-medium">House No. A10</span>
+            </div>
+            <div className="flex m-2 justify-around">
+            <button  className="bg-sentinel-l2-g-blue text-sentinel-body-blue h-14 w-1/3 font-bold px-4 py-1 rounded-md" onClick={()=>setAlert(false)}>OK!</button>
+            </div>
+        </div>
+        :
         <div>
 
             <div className="block mt-8">
@@ -52,7 +72,8 @@ const HomeAdmin = ({setAdmin}) => {
 
                 </div>
             </div>
-        </div>
+        </div>}
+        </>
     );
 };
 
