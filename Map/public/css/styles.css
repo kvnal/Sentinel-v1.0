@@ -1,0 +1,69 @@
+.message{
+    font-size: large;
+}
+@media screen and (min-width: 768px) {
+    .floormap {
+        border: #37CEFB 2px solid;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 14px;
+        background-color: #1E1F1F;
+        margin-bottom: 20px;
+    }
+}
+.floormap {
+    border: #37CEFB 2px solid;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 14px;
+    background-color: #1E1F1F;
+    margin-bottom: 20px;
+}
+
+div#connect {
+    border: solid 3px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 23px;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+
+.wdblue{
+    background-color: #37CEFB;
+}
+.wdyellow{
+    background-color: #E6D602;
+    color: #000;
+}
+
+.wdfloor{
+    background-color: #1E1F1F;
+}
+.button:hover{
+    color: #000;
+    /* background-color: #086f96b8; */
+    /* background-color: #03DAC6; */
+    background-color: #37CEFB;}
+.wdbutton:hover{
+    color: #000;
+    /* background-color: #086f96b8; */
+    /* background-color: #03DAC6; */
+    background-color:#E6D602;}
+
+
+.button:active{
+    color:#f0d50d;
+}
+
+.button:enabled{
+    color:#f5c91b;
+}
