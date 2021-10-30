@@ -35,7 +35,7 @@ const ToggleBtn = () => {
         <div>
             <div className="flex justify-between mb-2">
             <span className=" text-2xl text-sentinel-text-blue font-medium ">Favourite Scenes</span>
-            <span className=" text-2xl text-sentinel-text-blue font-medium px-2 ">Map</span>
+            <a href={"http://"+window.location.hostname +":5000"}><div className=" text-2xl text-sentinel-text-blue font-medium px-2 ">Map</div></a>
             </div>
             <div className="grid grid-cols-3 gap-2 ">
             {/* tv ac */}

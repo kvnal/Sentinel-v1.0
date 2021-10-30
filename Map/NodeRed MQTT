@@ -1,0 +1,17 @@
+Dining Room
+
+sensors/dining-room/control
+on
+High
+
+off
+Low
+
+
+sensors/gate/control
+
+on
+High
+
+off
+Low

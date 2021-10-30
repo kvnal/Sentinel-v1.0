@@ -1,0 +1,334 @@
+<!---->
+<!DOCTYPE html>
+<html>
+    <head><title>HOME</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">       
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/uis.css">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/styles.css">
+        
+        <script src="https://kit.fontawesome.com/07ce60a6d3.js"></script>
+         <script src="../js/mqttws31.js" type="text/javascript"></script>
+        <!--<script src="../js/uis.js" type="text/javascript"></script>-->
+        <script src="../js/main.js" type="text/javascript"></script>
+       
+      
+        
+    </head>
+    <body>
+
+            <!--<div id="connect">Connect</div>-->
+            <!--<div id = "message"></div>   -->
+            <header class="text-gray-600 body-font">
+              <div>
+                <!-- <img src="https://i.gifer.com/NXPt.gif" alt=""> -->
+                <!-- <img src="https://i.gifer.com/NXPt.gif" class="h-40 m-auto w-auto " alt=""> -->
+                <img src="./images/NXPt.gif" width="800" class="m-auto  " style="height: 7rem;object-fit: cover;" alt="">
+                <!-- <img src="https://thumbs.gfycat.com/RingedNiceFugu-size_restricted.gif" class="h-48 m-auto w-auto" alt=""> -->
+              </div>
+              <div class="pt-0 container  flex justify-start flex-wrap p-5 md:flex-row items-center">
+                <a class="flex justify-start title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                  <li class="button scene" id="connect"><i class="fas fa-home" aria-hidden="true"></i>INITIATE HOME</li>
+                  <span class="text-white text-center float-right ml-2 font-mono ">2NUVS</span>
+                </a>
+                <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                </nav>
+               
+              </div>
+            </header>
+<!-- <section class="text-gray-300 surface body-font">
+  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium wdred font-mono">WATCH DOG</h1>
+      <h1 class="title-font  text-2xl mb-4 font-medium wdred font-mono">Make Your Home Security Automated</h1>
+      <p class="mb-8 leading-relaxed">The smart home automation system is designed to conveniently manage and monitor household appliances and lighting fixtures remotely, to save time and to use resources effectively.It is a control system for allowing access to home automation devices. The automation devices include lights, fan, camera and doors. It even enhances the main features of the project to control the home appliances from anywhere as remotely.  With the camera module, continuous surveillance and protection of the home is accomplished. A significant improvement is achieved in utility costs by an optimal use of energy. Using inexpensive electronic and interactive tools, this initiative can be applied, making it economically, physically and operationally feasible.Basically it involves controlling everything remotely via a visual interface and mobile application. The automation system employs the use of MQTT protocol in order to secure the transmitted device based information to and from in the network. The defence against Man in the Middle attack (MITM) is the main focus of our automation system. The routed messages are checked at the intermediate hub to check for the occurrence of MITM based DoS attacks through manual reset points.</p>
+      <div class="flex justify-center">
+        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">know more</button>
+      </div>
+    </div>
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded" alt="hero" src="https://orig00.deviantart.net/6bca/f/2016/273/0/6/dedsec_360_noise_by_junguler-dajesob.gif">
+    </div>
+  </div>
+  <div class="container mx-auto flex px-5 py-5 md:flex-row flex-col items-center" id = "weather">
+    <% if(weather !== null){ %>
+      <p class="text-2xl wdyellow inline pl-6 font-mono"><%= weather %></p>
+    <% } %>
+
+    <% if(error !== null){ %>
+      <p><%= error %></p>
+    <% } %>
+  </div>
+</section> -->
+
+
+    
+        <!-- <h5 class="text-2xl wdyellow inline pl-6 font-mono">Favorite Accessories::</h5> -->
+
+        <!-- <ul class="button-wrapper">
+            <li class="button accessory" id="dining-switch">
+                <i class="fas fa-lightbulb"></i>
+                <p>Living/Dining Switch</p>
+            </li>
+
+            <li class="button accessory" id="bed-room">
+                <i class="fas fa-lightbulb"></i>
+                <p>Bedroom Lamp</p>
+            </li>
+            <li class="button accessory" id="utility-room">
+                <i class="fas fa-lightbulb"></i>
+                <p>Utility Room</p>
+            </li>
+            <li class="button accessory" id="hall-room">
+                <i class="fas fa-lightbulb"></i>
+                <p>Hall Room</p>
+            </li>
+            <li class="button accessory" id="bath-room">
+                <i class="fas fa-lightbulb"></i>
+                <p>Bath Room</p>
+            
+            <li class="button accessory" id="W-C-light">
+                <i class="fas fa-lightbulb"></i>
+                <p>WC Light</p>
+            </li>
+            <li class="button accessory" id="cams">
+                <i class="fas fa-camera"></i>
+                <p>Cameras</p>
+            </li>
+        </ul> -->
+
+
+    <!-- <h5 class="text-2xl wdyellow inline pl-6 font-mono">Favorite Scenes::</h5> -->
+
+    <!--<ul class="button-wrapper">
+        <li class="button scene" id="good-morning" onclick="toggle_('light_bathroom'),toggle_('light_hall'),toggle_('light_bed1')"><i class="fas fa-home"></i>Good Morning</li>
+        <li class="button scene" id="good-evening" onclick="toggle_('light_hall'),toggle_('light_out'),toggle_('light_dining')"><i class="fas fa-home"></i>Good Evening</li>
+        <li class="button scene" id="leave-home" ><i class="fas fa-home"></i>Leave Home</li>
+        <li class="button scene" id="all-camera" onclick="toggle_('camera_door'),toggle_('camera_living'),toggle_('camera_bed'),toggle_('camera_hall')"><i class="fas fa-home"></i>All Camera</li>
+        <li class="button scene" id="all-lights"onclick="toggle_('light_wc'),toggle_('light_out'),toggle_('light_hall'),toggle_('light_dining'),toggle_('light_bathroom'),toggle_('light_utility'),toggle_('light_bed1')"><i class="fas fa-home"></i>All Lights</li>
+         <li class="button scene" id="good-night"><i class="fas fa-home"></i>Good Night</li>
+        <li class="button scene" id="arrive-home"><i class="fas fa-home"></i>Arrive Home</li>
+    </ul> -->
+	
+    <div class="floormap">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none meet" x="0" y="0" viewBox="-0.000012627967407752294 -0.38463395833969116 900 710.7692260742188" width="100%" height="100%"><rect id="svgEditorBackground" x="0" y="0" width="900" height="710" style="fill:none; stroke: none;cursor:crosshair;"></rect><defs id="svgEditorDefs"><symbol xmlns="http://www.w3.org/2000/svg" id="f0eb" preserveAspectRatio="xMidYMid meet" viewBox="0 0 352 512"><path d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"></path></symbol><style type="text/css">.bed-room{fill:silver;}
+        .dining-room{fill:silver;stroke:black;vector-effect:non-scaling-stroke;stroke-width:1px;}
+        #e1_path{fill:red;}
+        #light_dining{fill:silver;}
+        .bathroom{fill:silver;}
+        .hall{fill:silver;}
+        #e16_path{fill:red;}
+        #e2_path{fill:red;}
+        </style></defs>
+          <image width="899" height="803" id="light" xlink:href="../floor-plan/floor bg.png" x="-2.241911" y="-28.309601"></image>
+          
+          
+        <g id="light" style="fill:#BDB7A0;"></g><use xlink:href="#f0eb" x="597.5338134392276" y="234.28714" width="91.15" height="132.58" id="light_dining" class="dining-room" onclick="toggle_(this.id)" transform="matrix(0.882723 0 0 0.882723 82.328 35.791)"></use>
+        
+        <g id="g_e1_svg"></g><use xlink:href="#f0eb" x="606.6390993914512" y="580.041748" width="91.15" height="132.58" id="light_bed1" onclick="toggle_(this.id)" class="bed-room" transform="matrix(0.867915 0 0 0.867915 93.9256 91.7907)"></use><use xlink:href="#f0eb" x="412.8958435058594" y="428.1405944824219" width="91.15" height="132.58" id="light_bathroom" onclick="toggle_(this.id)" transform="matrix(0.450436 0.00625036 -0.00625036 0.450436 304.158 200.139)" class="bathroom"></use><use xlink:href="#f0eb" x="-625.6689453125" y="1137.63232421875" width="91.15" height="132.58" id="light_utility" onclick="toggle_(this.id)" style="fill:silver;" transform="matrix(0.347965 0.00482844 -0.00482844 0.347965 357.264 260.378)"></use><use xlink:href="#f0eb" x="-731.3285522460938" y="419.9472351074221" width="91.15" height="132.58" id="light_wc" onclick="toggle_(this.id)" style="fill:silver;" transform="matrix(0.365213 0.00506777 -0.00506777 0.365213 390.134 235.48)"></use><g style="fill:silver; stroke:black; vector-effect:non-scaling-stroke;stroke-width:1px;" id="light_out" onclick="toggle_(this.id)" transform="matrix(-0.0098262 -0.301115 0.301115 -0.0098262 24.2664 423.975)"><path d="M-154.218971,39.611192c-0.6,13.2,5.9,24.9,16,31.7v14.1h40v-14.1c9.6-6.5,16-17.5,16-29.9c0-20.3-16.7-36.6-37.1-36c-18.6,0.6-8.263787,42.965813-34.8,34.2Z" class="gate"></path><path d="M-138.2189714819856,93.61119172709107c0,8.7,7.1,15.8,15.8,15.8h8.3c8.7,0,15.8,-7.1,15.8,-15.8v-0.2h-40v0.2Z"></path><path d="M-114.21897148198559,-14.588808272908949c0,2.2,-1.8,4,-4,4s-4,-1.8,-4,-4c0,-2.2,1.8,-4,4,-4s4,1.8,4,4Z"></path><path d="M-58.21897148198559,41.41119172709105c0,2.2,-1.8,4,-4,4s-4,-1.8,-4,-4c0,-2.2,1.8,-4,4,-4s4,1.8,4,4Z"></path><path d="M-170.2189714819856,41.41119172709105c0,2.2,-1.8,4,-4,4s-4,-1.8,-4,-4c0,-2.2,1.8,-4,4,-4s4,1.8,4,4Z"></path><path d="M-74.6189714819856,1.811191727091046c0,2.2,-1.8,4,-4,4s-4,-1.8,-4,-4c0,-2.2,1.8,-4,4,-4s4,1.8,4,4Z"></path><path d="M-153.81897148198559,81.01119172709102c0,2.2,-1.8,4,-4,4s-4,-1.8,-4,-4c0,-2.2,1.8,-4,4,-4s4,1.8,4,4Z"></path><path d="M-153.81897148198559,1.811191727091046c0,2.2,-1.8,4,-4,4s-4,-1.8,-4,-4c0,-2.2,1.8,-4,4,-4s4,1.8,4,4Z"></path><path d="M-74.6189714819856,81.01119172709102c0,2.2,-1.8,4,-4,4s-4,-1.8,-4,-4c0,-2.2,1.8,-4,4,-4s4,1.8,4,4Z"></path></g><path d="M-28.902301,-242.983517l-24.8,21.9v-22.2c0,-5.4,-4.4,-9.8,-9.8,-9.8h-68.4c-5.4,0,-9.8,4.4,-9.8,9.8v76.4c0,5.4,4.4,9.8,9.8,9.8h68.4c5.4,0,9.8,-4.4,9.8,-9.8v-22.2l24.8,21.9c6.5,4.3,15.2,-0.3,15.2,-8.1v-59.5c0,-7.8,-8.7,-12.5,-15.2,-8.1Z" style="fill:red; stroke:black; vector-effect:non-scaling-stroke;stroke-width:1px;" id="camera_door" onclick="toggle_(this.id)" transform="matrix(-0.199536 -0.141923 0.141923 -0.199536 52.1953 489.701)" class="gate"></path><path d="M-759.39585,1757.347837l-24.8,21.9v-22.2c0,-5.4,15.25602,80.528329,-9.8,-9.8h-68.4c-5.4,0,-9.8,4.4,-9.8,9.8v76.4c0,5.4,4.4,9.8,9.8,9.8h68.4c5.4,0,9.8,-4.4,9.8,-9.8v-22.2l24.8,21.9c6.5,4.3,15.2,-0.3,15.2,-8.1v-59.5c0,-7.8,-8.7,-12.5,-15.2,-8.1Z" id="camera_living" style="fill:red;" onclick="toggle_(this.id)" transform="matrix(0.342472 0.0471672 -0.0471672 0.342472 665.522 -480.527)" class="dining-room"></path>
+        
+        
+        <path d="M-1594.305955,2167.002871l-24.8,21.9v-22.2c0,-5.4,15.25602,80.528329,-9.8,-9.8h-68.4c-5.4,0,-9.8,4.4,-9.8,9.8v76.4c0,5.4,4.4,9.8,9.8,9.8h68.4c5.4,0,9.8,-4.4,9.8,-9.8v-22.2l24.8,21.9c6.5,4.3,15.2,-0.3,15.2,-8.1v-59.5c0,-7.8,-8.7,-12.5,-15.2,-8.1Z" id="camera_bed" onclick="toggle_(this.id)" style="fill:red;" transform="matrix(0.340252 -0.198498 0.198498 0.340252 501.442 -403.798)" class="bed-room"></path><path d="M-1315.729188,1820.315307l-24.8,21.9v-22.2c0,-5.4,15.25602,80.528329,-9.8,-9.8h-68.4c-5.4,0,-9.8,4.4,-9.8,9.8v76.4c0,5.4,4.4,9.8,9.8,9.8h68.4c5.4,0,9.8,-4.4,9.8,-9.8v-22.2l24.8,21.9c6.5,4.3,15.2,-0.3,15.2,-8.1v-59.5c0,-7.8,-8.7,-12.5,-15.2,-8.1Z" id="camera_hall" style="fill:red;" onclick="toggle_(this.id)" transform="matrix(-0.195614 -0.341917 0.341917 -0.195614 -599.815 414.159)" class="hall-room"></path>
+        
+        <path d="M649.73995949,628.08426887" style="fill:none;stroke:black;" stroke-width="1.3313917204077386" id="e3_path"></path><use xlink:href="#f0eb" x="-282.3120289547239" y="831.8681378952397" width="91.150002" height="132.580002" id="light_hall" onclick="toggle_(this.id)" transform="matrix(0.365213 0.00506777 -0.00506777 0.365213 292.942 179.562)" class="hall-room" style="fill:silver;"></use></svg>
+  </div>
+
+
+
+<footer class=" text-gray-600 body-font" style="background-color: #1C1D1C;">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+    
+      <span class="ml-3 text-xl text-white font-mono">☢ WATCH DOGS</span>
+    </a>
+    <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2021 by 2NUVS
+      <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank"></a>
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <a class="text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  let sceneAccessories = {
+      "good-morning": ["bed-room"],
+      "good-evening": ["bedroom-lamp", "great-room-book-case"],
+      "tv-time": ["tv-room-switch"],
+      "good-afternoon": ["tv-room-switch"],
+      "good-night": ["tv-room-switch"],
+  }
+
+  const HOME_BUTTONS = document.querySelectorAll(".button");
+  const SCENE_BUTTONS = document.querySelectorAll(".scene");
+  const ACCESSORY_BUTTONS = document.querySelectorAll(".accessory");
+
+
+  HOME_BUTTONS.forEach(button => {
+      button.addEventListener("click", function () {
+          if (this.classList.contains("accessory") && this.classList.contains("on")) {
+              this.lastElementChild.innerText = "Off";
+              this.classList.toggle("on");
+              checkScene();
+          } else if (this.classList.contains("accessory")) {
+              this.lastElementChild.innerText = "On";
+              this.classList.toggle("on");
+              checkScene();
+          } 
+      });
+  });
+
+  function setScene(sceneID) {
+      document.getElementById(sceneID).classList.toggle("on");
+      let sceneToBeSet = sceneAccessories[sceneID];
+      if (document.getElementById(sceneID).classList.contains("on")) {
+
+          sceneToBeSet.forEach(accessory => {
+              document.getElementById(accessory).classList.add("on");
+              document.getElementById(accessory).lastElementChild.innerText = "On";
+          });
+      } else {
+
+          sceneToBeSet.forEach(accessory => {
+              document.getElementById(accessory).classList.remove("on");
+              document.getElementById(accessory).lastElementChild.innerText = "Off";
+          });
+      }
+  }
+
+  function checkScene() {
+      SCENE_BUTTONS.forEach(scene => { // Iterate through each scene
+          let sceneAccessoryArray = sceneAccessories[scene.id]; //Create a list of associated accessories for each scene
+          switch (sceneAccessoryArray.every((node) => document.getElementById([node]).classList.contains("on"))) {
+              case true:
+                  document.getElementById(scene.id).classList.add("on");
+                  break;
+              case false:
+                  document.getElementById(scene.id).classList.remove("on");
+                  break;
+          }
+
+      });
+  }
+  /*******************************************************************************************************************************************/             
+  //Create a new Client object with your broker's hostname, port and your own clientId
+  var client = new Messaging.Client("broker.mqttdashboard.com", 8000, "page");
+  
+  var options = {
+  
+      //connection attempt timeout in seconds
+      timeout: 3,
+  
+      //Gets Called if the connection has successfully been established
+      onSuccess: function () {
+          // alert("Connected");
+          //document.getElementById("message").innerHTML = '<p class ="message">Connected to HiveMQ!<h1>';
+            console.log('Sucessfully connected');
+      },
+  
+      //Gets Called if the connection could not be established
+      onFailure: function (message) {
+          alert("Connection failed: " + message.errorMessage);
+          $("#connect").css("background-color","#e86c14");
+      }
+  
+  };
+  //Attempt to connect
+  client.connect(options);
+  
+  $("#connect").on("click", function(){
+    console.log("Message Called");
+    client.subscribe('home/value', {qos: 2}); 
+    client.subscribe('home/location', {qos: 2});
+    $("#connect").css("background-color","#0fa20fdb");
+    var pid,bool;
+  
+      //Gets called whenever you receive a message for your subscriptions
+      client.onMessageArrived = function (message) {
+          
+          //Do something with the push message you received
+          if(message.destinationName == "home/value"){
+              bool = message.payloadString;
+              console.log("bool:"+bool);
+          }
+          if(message.destinationName == "home/location"){
+              console.log(message.payloadString)
+              pid = message.payloadString;
+              console.log("id:"+ pid);
+              var element= document.getElementsByClassName(pid);
+              for(let i=0; i<element.length;i++){
+                  control(element[i].id,bool);
+                  console.log(element[i].id);
+              }
+          }         
+      }
+
+      $("#leave-home").on('click',function(){
+          var message = new Messaging.Message('true');
+          message.destinationName = 'sensors/lockdown';
+          message.qos = 2;
+          client.send(message);
+      });
+      $("#arrive-home").on('click',function(){
+          var message = new Messaging.Message('false');
+          message.destinationName = 'sensors/lockdown';
+          message.qos = 2;
+          client.send(message);
+      });
+          
+  });
+  
+
+      
+//    function toggle_(id){
+//    var svg= document.getElementById(id)
+//    var change
+//    if (id.includes("light"))
+//        change=(svg.style.fill=="yellow")?"silver":"yellow"      
+//    else
+//        change=(svg.style.fill=="red")?"green":"red"
+//    return console.log(svg.style.fill=change);
+
+//}
+
+
+//function control(id,bool){
+//    console.log(id)
+//    console.log(typeof id)
+
+//    var svg=document.getElementById(id)
+//    if(bool=="true")
+//        var change=(id.includes("light"))?"yellow":"green"
+//    else
+//        var change=(id.includes("light"))?"silver":"red"
+//    return console.log(svg.style.fill=change)
+
+//}
+</script>
+
+</body>
+</html>

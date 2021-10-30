@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* background-color:#29ffc6; */
+    /* background-image: linear-gradient(#0cebeb, #20e3b2,#29ffc6); */
+    background-repeat: no-repeat;
+    background-color: #010001;
+}
+
+.wdbutton{
+    background-color: #37CEFB;
+    color: #202020;
+    display: flex;
+    margin: 1%;
+}
+body {
+    font-weight: bold;
+    font-family: -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    height: 100%;
+    line-height: 1.5;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+}
+
+h5 {
+    color: #fff;
+    margin: 1%;
+}
+
+img {
+    filter: white(100%);
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content {
+    margin: 50px;
+}
+
+.status {
+    color: #fff;
+    margin: 0 0 5% 1%;
+}
+
+.button {
+    background-color:#FFFEFE;
+    /* border-radius: 10px; */
+    color: #202020;
+    display: flex;
+    margin: 1%;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.scene {
+    align-items: center;
+    font-size: 10pt;
+    height: 50px;
+    padding-left: 1rem;
+    width: 240px;
+}
+.surface{
+    background-color: #121212;
+    margin-bottom: 35px;
+}
+.wdred{
+    padding-left: 40px;
+    background-color: #D53A3A;
+    color: white;
+}
+.accessory {
+    flex-direction: column;
+    font-size: 9pt;
+    height: 115px;
+    padding: 1rem .75rem;
+    width: 110px;
+}
+
+.on,
+.thermostat {
+    background-color: hsl(104, 100%, 100%);
+    color: black;
+}
+
+.on .fa-home {
+    color: #4181EC;
+}
+
+.on .fa-lightbulb {
+    color: hsl(48, 100%, 58%);
+}
+
+.fa-thermometer-three-quarters {
+    color: hsl(0, 94%, 67%);
+}
+
+.thermostat:active {
+    background-color: hsl(35, 55%, 80%);
+    color: #121212;
+    filter: grayscale(100%);
+}
+
+.button-state {
+    color: #121212;
+}
+
+.fas {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.fa-home {
+    font-size: 1.5em;
+    margin: .25em;
+}
+
+.bulb {
+    margin-bottom: 5px;
+    width: 14px;
+}
+
+.temperature {
+    margin-bottom: 5px;
+    width: 28px;
+}
+
+.home{
+    display: flex;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+}
