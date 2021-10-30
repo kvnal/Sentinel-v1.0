@@ -1,0 +1,55 @@
+.myfilter img {
+  filter: none ;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+.myfilter{
+
+    position: relative;
+
+}
+
+.myfilter:after{
+
+  position: absolute; content: ''; display: block; top: 0; left: 0; height: 100%; width: 100%;
+
+  background: linear-gradient(to bottom,rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.54) 100%);
+
+  mix-blend-mode: multiply
+
+}
+
+.bubble{
+    background-position: center;
+    height: 19rem;
+    width: auto;
+    background-size: cover;
+  }
+
+.bubble-content{
+  transform: translateY(-28px);
+}
+.bubble-map{
+  transform: translateY(-28px);
+}
+
+.icons{
+  fill: currentColor;
+}
+
+.CBClient{
+  max-width: 50%;
+  /* width: fit-content; */
+}
+
+.CBSelf{
+  margin-left: 50%;
+  max-width: 50%;
+  justify-content: right;
+}
+
+.chatBox{
+  width: -webkit-fill-available;
+}
