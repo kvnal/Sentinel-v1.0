@@ -12,8 +12,8 @@ const IndividualRecord = ({ admin = false }) => {
     const { id } = useParams();
     const [recordData, setRecordData] = useState(null);
     
-    const banUser = () => {
-        axios.patch("/api/ban",{id:recordData.id, status : 1}).then(res=>console.log(res.data))
+    const banUser = (state) => {
+        axios.patch("/api/ban",{id:recordData._id, status : state}).then(res=>console.log(res.data))
         // req /api/ban PATCH
         
     };
@@ -45,8 +45,8 @@ const IndividualRecord = ({ admin = false }) => {
                         {
                             admin &&
                             <div className="mt-2">
-                                {recordData.status==1 && <button className="text-sentinel-l2-g-blue border-2 border-sentinel-l2-g-blue bg-sentinel-body-blue font-medium px-4 py-1 w-full mb-2" >Unban </button>}
-                                {recordData.status==0 && <button className="text-sentinel-l2-g-blue border-2 border-sentinel-l2-g-blue bg-sentinel-body-blue font-medium px-4 py-1 w-full mb-2 " onClick={banUser}>Ban</button>}
+                                {recordData.status==1 && <button className="text-sentinel-l2-g-blue border-2 border-sentinel-l2-g-blue bg-sentinel-body-blue font-medium px-4 py-1 w-full mb-2" onClick={()=>banUser(0)}>Unban </button>}
+                                {recordData.status==0 && <button className="text-sentinel-l2-g-blue border-2 border-sentinel-l2-g-blue bg-sentinel-body-blue font-medium px-4 py-1 w-full mb-2 " onClick={()=>banUser(1)}>Ban</button>}
 
                                 <LogEntry name={recordData.name}/>
                             </div>

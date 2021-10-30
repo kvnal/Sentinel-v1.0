@@ -53,8 +53,8 @@ route.post('/inbox', async (req,res)=>{
 //PATCH 
 //admin
 route.patch('/ban', async (req,res)=>{
-    const {id} = req.body
-    const update = {status:parseInt(req.body.status)}
+    const id = req.body.id
+    const update = {status:req.body.status}
     const response = await recordSchema.findOneAndUpdate({_id:id},update)
     return res.json(response)
 })
